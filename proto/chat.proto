@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package proto;
+
+message Message {
+    string body = 1;
+    string date = 2;
+    string user = 3;
+    string room = 4;
+}
+
+message Room {
+    string id = 1;
+}
+
+service ChatService {
+    rpc Send(Message) returns (google.protobuf.Empty) {}
+    rpc CreateRoom(Room) returns (google.protobuf.Empty) {}
+    rpc JoinRoom(Room) returns (stream Message) {}
+}
