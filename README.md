@@ -21,8 +21,12 @@ service ChatService {
 
 Client output when receiving messages
 
+[client.go](client.go)
+
 ![client](screenshots/client.PNG)
 
 Server output
+
+[server.go](server.go)
 
 ![server](screenshots/server.PNG)
