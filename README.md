@@ -19,10 +19,10 @@ service ChatService {
 }
 ```
 
-[client.go] (client.go)Client output when receiving messages
+[Client](client.go) output when receiving messages
 
 ![client](screenshots/client.PNG)
 
-[server.go](server.go) Server output
+[Server](server.go) output
 
 ![server](screenshots/server.PNG)
