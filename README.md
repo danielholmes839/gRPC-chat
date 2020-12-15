@@ -1,6 +1,7 @@
 # Simple gRPC chat
 
-The simplest chat service I could make using gRPC.
+The simplest chat service I could make using gRPC. There's an RPC to send messages, and one to receive messages using a stream.
+All clients who are using the "Receive" RPC will receive the messages from a "Send" RPC from other clients.
 
 ```proto3
 message Message {
@@ -15,4 +16,13 @@ message Join {
 service ChatService {
     rpc Send(Message) returns (google.protobuf.Empty) {}
     rpc Receive(Join) returns (stream Message) {}
-}```
+}
+```
+
+Client output when receiving messages
+
+![client](screenshots/client.PNG)
+
+Server output
+
+![server](screenshots/server.PNG)
